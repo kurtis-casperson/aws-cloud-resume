@@ -5,17 +5,19 @@ const Resume = () => {
     {
       title: 'QA Software Tester',
       company: 'ILTS',
-      year: '2019 - Present',
-      description: 'Developing web applications using React and Node.js.',
+      year: '2022- 2023',
+      description:
+        'Create and test software test cases.  Document bugs and report bug reproduction steps to engineering team.',
     },
     {
-      title: 'Frontend Developer',
-      company: 'Web Agency B',
-      year: '2017 - 2019',
-      description: 'Building responsive and user-friendly interfaces.',
+      title: 'QA tester and Engineer',
+      company: 'Edge Wallet',
+      year: '2021 - 2022',
+      description:
+        'Tested crypto wallet a mobile application. Worked in a React Native codebase to create automation tests.',
     },
     {
-      title: 'Intern',
+      title: 'Software Development Mastermind',
       company: 'Tech Startup C',
       year: '2016 - 2017',
       description:
@@ -33,11 +35,31 @@ const Resume = () => {
     'Node.js',
   ]
 
-  return (
-    <ResumeContainer>
-      <Header>Your Name</Header>
+  const displaySkills = skills.map((skill, index) => (
+    <li key={index}>{skill}</li>
+  ))
 
-      <About>
+  const displayWorkExperience = workExperiences.map((experience, index) => (
+    <div key={index}>
+      <h3>{experience.title}</h3>
+      <p>
+        {experience.company} - {experience.year}
+      </p>
+      <p>{experience.description}</p>
+    </div>
+  ))
+
+  return (
+    <>
+      {/* <div> */}
+      <div className=" absolute top-2 right-5">{PageCount()}</div>
+      <div className="font-bold text-center text-blue-400 ">
+        <h1 className="text-center ">
+          Kurtis Casperson <br /> Cloud Resume
+        </h1>
+      </div>
+      {/* </div> */}
+      <div className="p-10">
         <h2>About Me</h2>
         <p>
           I am a passionate and dedicated software developer with expertise in
@@ -45,30 +67,16 @@ const Resume = () => {
           collaborating with cross-functional teams to deliver high-quality
           solutions.
         </p>
-      </About>
-
-      <WorkExperience>
+      </div>
+      <div>
         <h2>Work Experience</h2>
-        {workExperiences.map((experience, index) => (
-          <div key={index}>
-            <h3>{experience.title}</h3>
-            <p>
-              {experience.company} - {experience.year}
-            </p>
-            <p>{experience.description}</p>
-          </div>
-        ))}
-      </WorkExperience>
-
-      <SkillsContainer>
-        <SkillsHeader>Skills</SkillsHeader>
-        <ul>
-          {skills.map((skill, index) => (
-            <li key={index}>{skill}</li>
-          ))}
-        </ul>
-      </SkillsContainer>
-    </ResumeContainer>
+        {displayWorkExperience}
+      </div>
+      <div>
+        <div>Skills</div>
+        <ul>{displaySkills}</ul>
+      </div>
+    </>
   )
 }
 

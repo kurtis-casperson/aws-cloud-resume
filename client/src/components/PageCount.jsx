@@ -1,5 +1,10 @@
+import { useState } from 'react'
+
 const PageCount = () => {
   const [count, setCount] = useState(0)
+
+  // get the number of pages from database
+  // post the number of pages to tdb when the page is visited
 
   {
     ;() => setCount((count) => count + 1)

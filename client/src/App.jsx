@@ -3,7 +3,11 @@ import Resume from './components/Resume'
 import './App.css'
 
 function App() {
-  return <></>
+  return (
+    <>
+      <Resume />
+    </>
+  )
 }
 
 export default App
