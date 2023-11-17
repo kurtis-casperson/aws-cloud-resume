@@ -19,7 +19,7 @@ const Resume = () => {
     {
       title: 'Software Development Mastermind',
       company: 'Tech Startup C',
-      year: '2016 - 2017',
+      year: '2023',
       description:
         'Gained experience in various aspects of software development.',
     },
@@ -51,7 +51,6 @@ const Resume = () => {
 
   return (
     <>
-      {/* <div> */}
       <div className=" absolute top-2 right-5">{PageCount()}</div>
       <div className="font-bold text-center text-blue-400 ">
         <h1 className="text-center ">
@@ -68,13 +67,15 @@ const Resume = () => {
           solutions.
         </p>
       </div>
-      <div>
-        <h2>Work Experience</h2>
-        {displayWorkExperience}
-      </div>
-      <div>
-        <div>Skills</div>
-        <ul>{displaySkills}</ul>
+      <div className="grid col-span-4 gap-3">
+        <div>
+          <h2>Work Experience</h2>
+          {displayWorkExperience}
+        </div>
+        <div className="col-span-5">
+          <div>Skills</div>
+          <ul>{displaySkills}</ul>
+        </div>
       </div>
     </>
   )
