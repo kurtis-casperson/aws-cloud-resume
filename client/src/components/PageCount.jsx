@@ -12,6 +12,7 @@ const PageCount = () => {
 
   const getPageCount = () => {
     try {
+      axios.get()
     } catch (e) {}
     setCount(count + 1)
   }
