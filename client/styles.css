@@ -11,6 +11,15 @@ body {
   /* padding-bottom: 10px; */
 }
 
+a {
+  text-decoration: none;
+  color: #0b0c0d;
+}
+
+#contact-info {
+  color: #0d0e0e;
+}
+
 section {
   line-height: 1;
   max-width: 1000px;
