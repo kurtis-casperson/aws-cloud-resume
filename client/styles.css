@@ -15,6 +15,9 @@ a {
   text-decoration: none;
   color: #0b0c0d;
 }
+a:hover {
+  color: #3a8def;
+}
 
 #contact-info {
   color: #0d0e0e;
@@ -82,6 +85,9 @@ li {
   border-bottom: 2px solid #3a8def;
 }
 
+#count {
+  color: #3a8def;
+}
 /* #contact-info {
   margin-bottom: 50px;
 } */
