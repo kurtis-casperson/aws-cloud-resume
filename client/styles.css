@@ -95,3 +95,8 @@ li {
 #name {
   padding-left: 20%;
 }
+
+#skills {
+  display: flex;
+  justify-content: space-between;
+}
