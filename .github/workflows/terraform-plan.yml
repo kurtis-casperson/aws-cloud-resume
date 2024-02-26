@@ -6,7 +6,7 @@ env:
   TF_API_TOKEN: 'zbqmzQObnlzbZw.atlasv1.a7K5yjg22FLdDrfRMUYVjr0SwXdaFSIBT0j7Me5zbSF48CJzzYazogfA7jQC5hx55xM'
   TF_WORKSPACE: 'cloud-resume-workspace'
 
-  jobs:
+jobs:
   terraform:
     if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
     name: 'Terraform Plan'
