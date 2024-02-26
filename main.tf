@@ -1,3 +1,4 @@
+
 terraform {
   required_providers {
     aws = {
@@ -5,6 +6,12 @@ terraform {
       version = "~> 5.37.0"
     }
   }
+  cloud { 
+    organization = "kcasperson" 
+    workspaces { 
+      name = "cloud-resume-workspace" 
+      } 
+    } 
 }
 
 # Configure the AWS Provider
@@ -40,16 +47,16 @@ resource "aws_dynamodb_table" "counter" {
 }
 
 #terraform apply error - imported fine
-resource "aws_lambda_function" "counter_function" {
-  function_name    = "myLambdaSample" 
-  handler          = "lambda_function.py"                
-  runtime          = "python 3.11"                   
-  role             = "arn:aws:lambda:us-west-1:735547181777:function:myLambdaSample" 
-  filename         = "myLambdaSample-40bec328-1d77-4bb2-b7e6-8a15630a60c9.zip"
+# resource "aws_lambda_function" "counter_function" {
+#   function_name    = "myLambdaSample" 
+#   handler          = "lambda_function.py"                
+#   runtime          = "python 3.11"                   
+#   role             = "arn:aws:lambda:us-west-1:735547181777:function:myLambdaSample" 
+#   filename         = "myLambdaSample-40bec328-1d77-4bb2-b7e6-8a15630a60c9.zip"
   
-  ephemeral_storage {
-    size = 512 
-  }   
-}
+#   ephemeral_storage {
+#     size = 512 
+#   }   
+# }
 
 

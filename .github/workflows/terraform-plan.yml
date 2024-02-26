@@ -1,0 +1,26 @@
+name: 'Terraform Plan'
+
+on: push
+env:
+  TF_CLOUD_ORGANIZATION: 'kcasperson'
+  TF_API_TOKEN: 'zbqmzQObnlzbZw.atlasv1.a7K5yjg22FLdDrfRMUYVjr0SwXdaFSIBT0j7Me5zbSF48CJzzYazogfA7jQC5hx55xM'
+  TF_WORKSPACE: 'cloud-resume-workspace'
+
+  jobs:
+  terraform:
+    if: github.repository != 'hashicorp-education/learn-terraform-github-actions'
+    name: 'Terraform Plan'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Upload Configuration
+        uses: hashicorp/tfc-workflows-github/actions/upload-configuration@v1.0.0
+        id: plan-upload
+        with:
+        workspace: ${{ env.TF_WORKSPACE }}
+        directory: ${{ env.CONFIG_DIRECTORY }}
+        speculative: true
