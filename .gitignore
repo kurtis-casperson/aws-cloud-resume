@@ -27,3 +27,4 @@ dist-ssr
 *.tfstate
 *.tfstate.backup
 
+.env
