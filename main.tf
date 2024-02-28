@@ -18,7 +18,6 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-west-1"
-  # api_token = var.api_token
 
 }
 
