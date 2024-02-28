@@ -17,8 +17,7 @@ terraform {
 # Configure the AWS Provider
 provider "aws" {
   region = "us-west-1"
-  access_key = "AKIA2WQQHJLI2ZPBNI5R"
-  secret_key = "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"
+  
 }
 
 resource "aws_s3_bucket" "cloud_resume" {

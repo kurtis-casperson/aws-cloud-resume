@@ -3,7 +3,7 @@ name: 'Terraform Plan'
 on: push
 env:
   TF_CLOUD_ORGANIZATION: 'kcasperson'
-  TF_API_TOKEN: 'zbqmzQObnlzbZw.atlasv1.a7K5yjg22FLdDrfRMUYVjr0SwXdaFSIBT0j7Me5zbSF48CJzzYazogfA7jQC5hx55xM'
+  TF_API_TOKEN: '${{ secrets.TF_API_TOKEN }}'
   TF_WORKSPACE: 'cloud-resume-workspace'
 
 jobs:
