@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kurtis Casperson Cloud Resume</title>
-
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -17,7 +16,13 @@
           <p>Page Visits <span id="count"></span></p>
         </div>
         <ul id="contact-info">
-          <li><p>(650) 576-7524</p></li>
+          <li>
+            <img
+              id="aws-cert"
+              src="certified-cloud-practitioner.jpg"
+              alt="AWS CCP"
+            />
+          </li>
           <li>
             <a
               href="https://www.linkedin.com/in/kurtis-casperson/"
@@ -42,26 +47,20 @@
       </div>
       <section>
         <h2>Skills</h2>
-        <div id="skills">
-          <ul>
-            <li>HTML5, CSS3</li>
-            <li>JavaScript</li>
-            <li>React</li>
-            <li>Node</li>
-            <li>Typescript</li>
-            <li>AWS</li>
-          </ul>
-          <div id="aws-cert">
-            <img src="certified-cloud-practitioner.jpg" alt="AWS CCP" />
-          </div>
+        <div class="skillsContainer">
+          <div>HTML5, CSS3</div>
+          <div>JavaScript</div>
+          <div>React</div>
+          <div>Node</div>
+          <div>Typescript</div>
+          <div>AWS</div>
+          <div>Manual / Automated Testing</div>
+          <div>CI/CD</div>
         </div>
       </section>
-
       <section class="experience">
         <h2>Work Experience</h2>
-
         <h3>QA Software Tester, ILTS — Aug. 2022 - Sep. 2023</h3>
-
         <h3>
           QA Tester / Automation Engineer, Edge Wallet - June 2021 - July 2022
         </h3>
@@ -89,7 +88,6 @@
           This course provided a detailed overview of cloud concepts, AWS core
           services, security, architecture, pricing, and support.
         </p>
-
         <h3>Software Development Mastermind Program</h3>
         <p>
           The program simulates a work environment by focusing on building
