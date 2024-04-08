@@ -81,11 +81,12 @@ a:hover {
   height: auto; /* Maintain aspect ratio */
 }
 
-/* Adjust sections to align with header */
+#count {
+  color: #3a8def;
+}
+
 section {
   margin-top: 30px; /* Add space above each section */
   border-top: 1px solid #2260e6; /* Add thin black line between sections */
   padding-top: 20px; /* Add space above section content */
 }
-
-/* Other styles remain the same */
